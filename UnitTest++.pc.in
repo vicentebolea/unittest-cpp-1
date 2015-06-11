@@ -7,5 +7,5 @@ Name: UnitTest++
 URL: https://github.com/unittest-cpp/unittest-cpp
 Description: Simple C++ Unit test library.
 Version: @PACKAGE_VERSION@
-Libs: -lUnitTest++
+Libs: -L${libdir} -lUnitTest++
 Cflags: -I${includedir}

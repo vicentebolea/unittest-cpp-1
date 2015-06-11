@@ -4,12 +4,14 @@
 AC_PREREQ([2.69])
 AC_INIT([UnitTest++], [1.4.1], [pjohnmeyer@gmail.com])
 AC_CONFIG_SRCDIR([UnitTest++/TestDetails.cpp])
+AC_CONFIG_AUX_DIR([./.autotools_aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([UnitTest++.pc])
 
-AM_INIT_AUTOMAKE([foreign])
-LT_INIT()
+AM_INIT_AUTOMAKE([foreign subdir-objects])
+AM_SILENT_RULES([yes])
+LT_INIT
 
 AC_SUBST([LIBUNITTEST_SO_VERSION], [1:4:1])
 
